@@ -1,18 +1,14 @@
 module.exports = {
-  entry: "./app/App.js",
+  entry: './index.js',
+
   output: {
-    filename: "public/bundle.js"
+    filename: 'bundle.js',
+    publicPath: ''
   },
+
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react']
-        }
-      }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
   }
 }
