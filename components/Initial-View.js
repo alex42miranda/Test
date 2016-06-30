@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-export default React.createClass({
+export default class InitialView extends React.Component{
   render() {
     return (
       <div>
@@ -15,4 +15,4 @@ export default React.createClass({
       </div>
     )
   }
-})
+}

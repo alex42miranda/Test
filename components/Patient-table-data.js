@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default React.createClass ({
+export default class PatientTableData extends React.Component {
 	render () {
 		return (
 
@@ -57,4 +57,4 @@ export default React.createClass ({
 
 			);
 	}
-})
+}

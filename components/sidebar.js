@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default React.createClass({
-	render: function() {
+export default class Sidebar extends React.Component{
+	render () {
 		return(
 			<div class="container-fluid">
 		      <div class="row">
@@ -23,5 +23,5 @@ export default React.createClass({
 			);
 	}
 
-})
+}
 

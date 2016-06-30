@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default React.createClass({
-	handleSubmit: function (e) {
+export default class Form extends React.Component{
+	handleSubmit(e) {
 		e.preventDefault();
 			console.log(this.refs.PatientName.value);
 			console.log(this.refs.PatientDisease.value);
 			console.log(this.refs.PatientPresentIllness.value);
 			
-		},
+		}
 	render () {
 		return (
 		<form onSubmit={this.handleSubmit}>
@@ -35,6 +35,6 @@ export default React.createClass({
 			</ul>
 				
 	</form>
-			);
+			)
 	}
-})
+}
