@@ -1,15 +1,7 @@
 import React from 'react'
 
-export default class form extends React.Component{
-		handleSubmit(e){
-		e.preventDefault();
-		}
-
-		handlePatientName(e) {
-			this.setState({
-				patientname: e.target.value
-			})
-		}
+export default class Form extends React.Component{
+	
 		handlePatientDisease(e){
 			this.setState({
 				patientdisease: e.target.value
@@ -20,14 +12,24 @@ export default class form extends React.Component{
 				patientpresentillness: e.target.value
 			})
 		}
+		handlePatientName(e){
+		let patientName = e.target.value
+		this.setState({ patientName })
+		this.props.onPatientNameChange.value
+	}
+
+	handleSubmit(e){
+		e.preventDefault();
+		console.log("Patient name changed to:", patientName.value)
+		}
 		
 	render () {
 		return (
-		<form> 
+		<form onSubmit={this.handleSubmit}> 
 			<ul>
 				<li>
 					<label> Nome do Paciente </label>
-					<input type="text" name="patientname" placeholder="nome do paciente"  OnChange={this.handlePatientName} />
+					<input type="text" name="patientName" id="patientName" placeholder="nome do paciente"  onChange={this.handlePatientName.bind(this)} />
 					
 				</li>
 				<li>
@@ -43,12 +45,13 @@ export default class form extends React.Component{
 				
 
 				<li>
-					<button type="button" onClick={this.handleSubmit}> Submit </button>
+					<button type="submit"> Submit </button>
 				</li>
 			</ul>
 				
 	</form>
 			);
 	}
+	
 
 }

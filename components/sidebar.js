@@ -1,7 +1,10 @@
 import React from 'react'
+import patientName from './Form'
 
 export default class Sidebar extends React.Component{
-	
+	handlePatientNameChange(patientName){
+		console.log("Patient name changed to:", patientName)
+	}
 	
 	render () {
 		return(
@@ -10,12 +13,10 @@ export default class Sidebar extends React.Component{
 		        <div class="col-sm-3 col-md-2 sidebar">
 		          <ul class="nav nav-sidebar">
 
-		            <li><a href="#">Alexandre Miranda</a></li>
-		            <li><a href="#">Felipe Neves</a></li>
-		            <li><a href="#">Andressa Lyra</a></li>
-		            <li><a href="#">Artur Lyra</a></li>
-		            <li><a href="#">Antonio Lyra</a></li>
-		            <li><a href="#">Ricardo Lyra</a></li>
+		            <li><a href="#" onPatientNameChange={this.handlePatientNameChange.bind(this)}></a></li>
+		            
+
+								
 								
 		          </ul>
 		          
