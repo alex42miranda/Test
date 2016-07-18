@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default class Form extends React.Component{
 	
 		handlePatientDisease(e){
@@ -13,14 +14,14 @@ export default class Form extends React.Component{
 			})
 		}
 		handlePatientName(e){
-		let patientName = e.target.value
-		this.setState({ patientName })
-		this.props.onPatientNameChange.value
+		const patientName = e.target.value
+		this.props.changeName(patientName);
+		
 	}
 
 	handleSubmit(e){
 		e.preventDefault();
-		console.log("Patient name changed to:", patientName.value)
+		
 		}
 		
 	render () {
