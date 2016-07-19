@@ -8,7 +8,6 @@ export default class InitialView extends React.Component{
         <h1>Sistema de Cadastro de Pacientes</h1>
         <ul role="nav">
           <li><Link to="/patientsnames">Lista de Pacientes</Link></li>
-          <li><Link to="/patientdata">Tabela de Dados dos Pacientes</Link></li>
           <li><Link to="/patientregister">Cadastrar Novo PAciente</Link></li>
 
         </ul>

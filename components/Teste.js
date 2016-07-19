@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Form from './Form'
+
 import Sidebar from './sidebar'
 
 export default class Teste extends React.Component {
@@ -13,7 +13,7 @@ export default class Teste extends React.Component {
 
 
 changeName(patientName) {
-    this.setState({patientName: patientName})
+    this.setState({patientName})
 }
 
 render() {

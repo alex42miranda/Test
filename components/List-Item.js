@@ -6,7 +6,7 @@ export default class ListItem extends React.Component {
     render() {
        
         return(
-            <li><a href="#">{this.props.patientName}</a></li>
+            <li><a href="#">Alexandre</a></li>
         )
     }
 }
